@@ -1,4 +1,4 @@
-name: Deployment Exsercise 2
+name: Deployment Exercise 2
 on: push
 jobs:
   check:
@@ -7,6 +7,7 @@ jobs:
     - name: Checking code
       run: echo "Checking code"
   deploy:
+    needs: check
     runs-on: ubuntu-latest
     steps:
     - name: Deploying code
